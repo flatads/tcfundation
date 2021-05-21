@@ -29,8 +29,13 @@ Pod::Spec.new do |spec|
   spec.static_framework = true
   
   spec.frameworks = 'AdSupport', 'CoreTelephony'
+
+  spec.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
-  spec.source_files  = "TCFoundation"
+  spec.source_files  = "TCFoundation", "TCFoundation/Classes/**/*"
   
   spec.vendored_frameworks = "TCFoundation/**/*.{framework}"
 
