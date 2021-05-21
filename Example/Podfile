@@ -1,9 +1,13 @@
-use_frameworks!
+#use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'TCFoundation_Example' do
   pod 'TCFoundation', :path => '../'
+  
+  pod "AFNetworking", "4.0.1"
+  pod "FMDB", "2.6.2"
+  pod "TCUtil", "~> 1.0.0"
 
   target 'TCFoundation_Tests' do
     inherit! :search_paths

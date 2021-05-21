@@ -1,42 +1,41 @@
 #
-# Be sure to run `pod lib lint TCFoundation.podspec' to ensure this is a
-# valid spec before submitting.
+#  Be sure to run `pod spec lint TCFoundation.podspec' to ensure this is a
+#  valid spec and to remove all comments including this before submitting the spec.
 #
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
+#  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
+#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-Pod::Spec.new do |s|
-  s.name             = 'TCFoundation'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of TCFoundation.'
+Pod::Spec.new do |spec|
+  spec.name         = "TCFoundation"
+  spec.version      = "1.0.0"
+  spec.summary      = "iOS OC基础库Foundation"
+  spec.description  = <<-DESC
+                   iOS OC基础库Foundation，目前支持：network、io、config、event等基础功能
+                   DESC
+  spec.homepage     = "https://github.com/flatads/tcfundation"
+  spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  spec.author             = { "flatads" => "flatincbr.dev@gmail.com" }
 
-  s.homepage         = 'https://github.com/flatads/TCFoundation'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'flatads' => 'chenwh02@flatincbr.com' }
-  s.source           = { :git => 'https://github.com/flatads/TCFoundation.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '9.0'
-
-  s.source_files = 'TCFoundation/Classes/**/*'
+  spec.source       = { :git => "https://github.com/flatads/tcfundation", :tag => "#{spec.version}" }
   
-  # s.resource_bundles = {
-  #   'TCFoundation' => ['TCFoundation/Assets/*.png']
-  # }
+  spec.platform = :ios, "9.0"
+  spec.ios.deployment_target = "9.0"
+  
+  spec.libraries = "c++"
+  spec.requires_arc = true
+  spec.static_framework = true
+  
+  spec.frameworks = 'AdSupport', 'CoreTelephony'
+  
+  spec.source_files  = "TCFoundation"
+  
+  spec.vendored_frameworks = "TCFoundation/**/*.{framework}"
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  spec.dependency "AFNetworking", "4.0.1"
+  spec.dependency "FMDB", "2.6.2"
+  spec.dependency "TCUtil", "~> 1.0.0"
+
 end
