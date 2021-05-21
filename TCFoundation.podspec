@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
 
   spec.author             = { "flatads" => "flatincbr.dev@gmail.com" }
 
-  spec.source       = { :git => "https://github.com/flatads/tcfundation", :tag => "#{spec.version}" }
+  spec.source     = { :git => "https://github.com/flatads/tcfundation.git", :tag => "#{spec.version}" }
   
   spec.platform = :ios, "9.0"
   spec.ios.deployment_target = "9.0"
