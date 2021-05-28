@@ -5,10 +5,11 @@
 //  Created by EkoHu on 2021/3/17.
 //
 
-#import <AFNetworking/AFSecurityPolicy.h>
 #import <TCUtil/TCUtilMacro.h>
 #import "TCNetworkRequest.h"
 #import "TCDebugHTTPModel.h"
+
+#import "AFSecurityPolicy.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

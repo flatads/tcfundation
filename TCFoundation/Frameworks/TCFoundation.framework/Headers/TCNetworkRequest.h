@@ -24,9 +24,12 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking/AFNetworking.h>
-#import <TCUtil/TCUtil.h>
 #import "TCNetworkRequestProtocol.h"
+#import "TCFMacro.h"
+#import "AFSecurityPolicy.h"
+#import "AFHTTPSessionManager.h"
+#import "AFURLRequestSerialization.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 

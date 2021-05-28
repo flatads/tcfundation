@@ -9,7 +9,7 @@
  * 序列化包体是未知格式的请求（纯二进制数据或封装信息）
  */
 
-#import <AFNetworking/AFNetworking.h>
+#import "AFURLRequestSerialization.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -6,8 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking/AFNetworking.h>
-#import <TCUtil/TCUtil.h>
 
 NS_ASSUME_NONNULL_BEGIN
 typedef void(^TCNetworkPrograssBlock)(NSProgress* progress, id req);
