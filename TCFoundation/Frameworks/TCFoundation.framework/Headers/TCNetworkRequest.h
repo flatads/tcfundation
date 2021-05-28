@@ -26,10 +26,12 @@
 #import <Foundation/Foundation.h>
 #import "TCNetworkRequestProtocol.h"
 #import "TCFMacro.h"
-#import "AFSecurityPolicy.h"
-#import "AFHTTPSessionManager.h"
-#import "AFURLRequestSerialization.h"
 
+@class AFSecurityPolicy;
+@class AFHTTPSessionManager;
+@class AFURLRequestSerialization;
+
+@protocol AFMultipartFormData;
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -12,7 +12,7 @@
     "flatads": "flatincbr.dev@gmail.com"
   },
   "source": {
-    "git": "https://github.com/flatads/tcfundation",
+    "git": "https://github.com/flatads/tcfundation.git",
     "tag": "1.0.0"
   },
   "platforms": {
@@ -25,7 +25,17 @@
     "AdSupport",
     "CoreTelephony"
   ],
-  "source_files": "TCFoundation",
+  "pod_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+  },
+  "user_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
+  },
+  "source_files": [
+    "TCFoundation",
+    "TCFoundation/Classes/**/*"
+  ],
   "vendored_frameworks": "TCFoundation/**/*.{framework}",
   "dependencies": {
     "AFNetworking": [

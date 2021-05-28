@@ -13,36 +13,36 @@ FOUNDATION_EXPORT double TCFoundationVersionNumber;
 //! Project version string for TCFoundation.
 FOUNDATION_EXPORT const unsigned char TCFoundationVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <TCFoundation/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <TCFoundation/TCFoundation/PublicHeader.h>
 
 // network
-#import "TCNetworkEngine.h"
-#import "TCNetworkDownloadRequest.h"
-#import "TCNetworkRequest.h"
-#import "TCDebugHTTPModel.h"
+#import <TCFoundation/TCNetworkEngine.h>
+#import <TCFoundation/TCNetworkDownloadRequest.h>
+#import <TCFoundation/TCNetworkRequest.h>
+#import <TCFoundation/TCDebugHTTPModel.h>
 
 // orm
-#import "TCSqliteORMModelProtocol.h"
-#import "TCSqliteORMSessionProtocol.h"
-#import "TCSqliteORMModel.h"
-#import "TCSqliteORMModel+List.h"
-#import "TCSqliteORMDAO.h"
+#import <TCFoundation/TCSqliteORMModelProtocol.h>
+#import <TCFoundation/TCSqliteORMSessionProtocol.h>
+#import <TCFoundation/TCSqliteORMModel.h>
+#import <TCFoundation/TCSqliteORMModel+List.h>
+#import <TCFoundation/TCSqliteORMDAO.h>
 
 // log
-#import "TCLogMacro.h"
-#import "TCLogger.h"
-#import "TCLogModel.h"
-#import "TCLogCapture.h"
-#import "TCLogManager.h"
+#import <TCFoundation/TCLogMacro.h>
+#import <TCFoundation/TCLogger.h>
+#import <TCFoundation/TCLogModel.h>
+#import <TCFoundation/TCLogCapture.h>
+#import <TCFoundation/TCLogManager.h>
 
 // event
-#import "TCEventCenter.h"
-#import "TCEventBase.h"
+#import <TCFoundation/TCEventCenter.h>
+#import <TCFoundation/TCEventBase.h>
 
 // config
-#import "TCConfigCenterProtocol.h"
-#import "TCConfigCenter.h"
+#import <TCFoundation/TCConfigCenterProtocol.h>
+#import <TCFoundation/TCConfigCenter.h>
 
 // reuse
-#import "TCReuseManagerItemProtocol.h"
-#import "TCReuseManager.h"
+#import <TCFoundation/TCReuseManagerItemProtocol.h>
+#import <TCFoundation/TCReuseManager.h>
