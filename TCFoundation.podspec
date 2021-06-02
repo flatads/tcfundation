@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TCFoundation"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.1"
   spec.summary      = "iOS OC基础库Foundation"
   spec.description  = <<-DESC
                    iOS OC基础库Foundation，目前支持：network、io、config、event等基础功能
