@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
                    iOS OC基础库Foundation，目前支持：network、io、config、event等基础功能
                    DESC
   spec.homepage     = "https://github.com/flatads/tcfundation"
-  spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   spec.author             = { "flatads" => "flatincbr.dev@gmail.com" }
