@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TCFoundation"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.2"
   spec.summary      = "iOS OC基础库Foundation"
   spec.description  = <<-DESC
                    iOS OC基础库Foundation，目前支持：network、io、config、event等基础功能
@@ -28,23 +28,20 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.static_framework = true
   
-  spec.frameworks = 'AdSupport', 'CoreTelephony'
+  spec.frameworks = 'Foundation', 'Security', 'SystemConfiguration', 'CoreTelephony', 'MobileCoreServices'
 
   spec.pod_target_xcconfig = {
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
-  
+
   spec.user_target_xcconfig = {
-     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
-    }
-    
-  spec.source_files  = "TCFoundation", "TCFoundation/Classes/**/*"
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
   
   spec.vendored_frameworks = "TCFoundation/**/*.{framework}"
 
-  spec.dependency "AFNetworking", "4.0.1"
-  spec.dependency "FMDB", "2.6.2"
-  spec.dependency "TCUtil", "~> 1.0.0"
+  spec.dependency "AFNetworking", "~> 4.0.1"
+  spec.dependency "FMDB", "~> 2.6.2"
+  spec.dependency "TCUtil", "~> 1.0.2"
 
 end

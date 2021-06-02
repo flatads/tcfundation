@@ -17,6 +17,7 @@
 {
     [launchOptions JSONRepresentation];
     
+    [TCNetworkEngine alloc];
     // Override point for customization after application launch.
     return YES;
 }

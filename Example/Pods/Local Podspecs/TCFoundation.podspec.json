@@ -29,23 +29,18 @@
     "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
   },
   "user_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
-    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
   },
-  "source_files": [
-    "TCFoundation",
-    "TCFoundation/Classes/**/*"
-  ],
   "vendored_frameworks": "TCFoundation/**/*.{framework}",
   "dependencies": {
     "AFNetworking": [
-      "4.0.1"
+      "~> 4.0.1"
     ],
     "FMDB": [
-      "2.6.2"
+      "~> 2.6.2"
     ],
     "TCUtil": [
-      "~> 1.0.0"
+      "~> 1.0.2"
     ]
   }
 }

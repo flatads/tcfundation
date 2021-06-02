@@ -1,6 +1,0 @@
-framework module TCFoundation {
-  umbrella header "TCFoundation-umbrella.h"
-
-  export *
-  module * { export * }
-}
