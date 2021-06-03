@@ -18,6 +18,7 @@
     [launchOptions JSONRepresentation];
     
     [TCNetworkEngine alloc];
+    [TCSqliteORMModel dbPath];
     // Override point for customization after application launch.
     return YES;
 }

@@ -24,7 +24,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking/AFNetworking.h>
+
 #import "TCNetworkRequestProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -34,8 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 /****************************************************/
 #pragma mark Request
 /****************************************************/
--(void)onConstructMultipartWithFormData:(nonnull id<AFMultipartFormData>)formData;       // only valid in post and isMultipartPost = YES
--(nullable NSURLSessionTask*)urlSessionWithTasksessionMgr:(nonnull AFHTTPSessionManager*)sessionMgr
+-(void)onConstructMultipartWithFormData:(nonnull id)formData;       // only valid in post and isMultipartPost = YES
+-(nullable NSURLSessionTask*)urlSessionWithTasksessionMgr:(nonnull NSObject*)sessionMgr
                                            uploadProgress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress
                                          downloadProgress:(nullable void (^)(NSProgress * _Nonnull))downloadProgress
                                           successProgress:(nullable void (^)(NSURLSessionDataTask* _Nullable task, id _Nullable responseObject))successProgress
@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 /****************************************************/
 +(nonnull NSString*)poolID  TC_PURE_VIRTUAL;                // must provided
 +(nullable NSURL*)baseURL;                                  // default - nil
-+(AFSecurityPolicy*)policy;                                 // default - nil
++(NSObject*)policy;                                 // default - nil
 +(NSUInteger)concurrentCount;                               // default - 4
 +(TCHttpRequestType)httpRequestType;                        // default - TCHttpRequestType_JSON
 +(nullable NSURLSessionConfiguration*)configuration;        // default - nil

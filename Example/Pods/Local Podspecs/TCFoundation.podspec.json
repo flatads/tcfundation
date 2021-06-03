@@ -1,19 +1,19 @@
 {
   "name": "TCFoundation",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "summary": "iOS OC基础库Foundation",
   "description": "iOS OC基础库Foundation，目前支持：network、io、config、event等基础功能",
   "homepage": "https://github.com/flatads/tcfundation",
   "license": {
     "type": "MIT",
-    "file": "FILE_LICENSE"
+    "file": "LICENSE"
   },
   "authors": {
     "flatads": "flatincbr.dev@gmail.com"
   },
   "source": {
     "git": "https://github.com/flatads/tcfundation.git",
-    "tag": "1.0.0"
+    "tag": "1.0.2"
   },
   "platforms": {
     "ios": "9.0"
@@ -22,14 +22,19 @@
   "requires_arc": true,
   "static_framework": true,
   "frameworks": [
-    "AdSupport",
-    "CoreTelephony"
+    "Foundation",
+    "Security",
+    "SystemConfiguration",
+    "CoreTelephony",
+    "MobileCoreServices"
   ],
   "pod_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
   },
   "user_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
   },
   "vendored_frameworks": "TCFoundation/**/*.{framework}",
   "dependencies": {

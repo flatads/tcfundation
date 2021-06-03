@@ -10,7 +10,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking/AFNetworking.h>
+#import "AFNetworking.h"
 #import "TCNetworkRequestProtocol.h"
 #import "TCNetworkRequest.h"
 
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TCNetworkEnginePool : NSObject
 @property(nonatomic, strong, readonly) NSString* poolID;
-@property(nonatomic, strong, readonly) AFHTTPSessionManager* sessionMgr;
+@property(nonatomic, strong, readonly) NSObject* sessionMgr;
 @property(nonatomic, strong, readonly) NSMutableSet<id<TCNetworkRequestProtocol>>* requests;
 @property(nonatomic, assign, readonly) TCHttpRequestType parserType;
 @property(nonatomic, assign) NSUInteger sequence;

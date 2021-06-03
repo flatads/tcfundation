@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TCFoundation"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "iOS OC基础库Foundation"
   spec.description  = <<-DESC
                    iOS OC基础库Foundation，目前支持：network、io、config、event等基础功能
@@ -31,11 +31,13 @@ Pod::Spec.new do |spec|
   spec.frameworks = 'Foundation', 'Security', 'SystemConfiguration', 'CoreTelephony', 'MobileCoreServices'
 
   spec.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
   }
 
   spec.user_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
   }
   
   spec.vendored_frameworks = "TCFoundation/**/*.{framework}"

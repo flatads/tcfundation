@@ -4,8 +4,6 @@
 //
 //  Created by EkoHu on 2021/3/17.
 //
-
-#import <AFNetworking/AFSecurityPolicy.h>
 #import "TCNetworkRequest.h"
 #import "TCDebugHTTPModel.h"
 
@@ -15,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** register request pool */
 -(BOOL)registerRequetPoolWithID:(nonnull NSString*)poolID
                         baseURL:(nullable NSURL*)baseURL
-                         policy:(nullable AFSecurityPolicy*)policy
+                         policy:(nullable NSObject *)policy
                 concurrentCount:(NSUInteger)count
               serializationType:(TCHttpRequestType)type
                   configuration:(nullable NSURLSessionConfiguration *)configuration;
