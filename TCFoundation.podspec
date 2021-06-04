@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TCFoundation"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "iOS OC基础库Foundation"
   spec.description  = <<-DESC
                    iOS OC基础库Foundation，目前支持：network、io、config、event等基础功能
@@ -43,7 +43,7 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = "TCFoundation/**/*.{framework}"
 
   spec.dependency "AFNetworking", "~> 4.0.1"
-  spec.dependency "FMDB", "~> 2.6.2"
+  spec.dependency "FMDB", "~> 2.7.5"
   spec.dependency "TCUtil", "~> 1.0.2"
 
 end
